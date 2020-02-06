@@ -21,7 +21,8 @@ await addItem.save((error,success)=>{
   });
   //renderar till ejs
   router.get("/todo", async (req, res) => {
-    const items = await Item.find()
+      //const sorted = req.query.sort;
+    const items = await Item.find().sort({text:1})
   res.render("todo",{items});
   })
 
@@ -36,8 +37,7 @@ await addItem.save((error,success)=>{
   
   router.get("/update/:id", async (req,res)=>{
     //hämta spec data från databas/ en quary till databasen
-    const sorted = req.query.sort
-    const response = await Item.findById({_id:req.params.id}).sort({done: sorted});
+    const response = await Item.findById({_id:req.params.id});
     console.log(response);
     res.render("edit", {response})
   });
@@ -46,8 +46,9 @@ await addItem.save((error,success)=>{
   
     //updateOne metod för att kunna redigera 
     await Item.updateOne({_id:req.body._id},
-       {$set: {text: req.body.text, done:req.body.done},
+       {$set: {text: req.body.text, done:req.body.done}},
     {runValidators:true}) // set = gå till databasen, ta klientens värde, updatera 
+  
     console.log(req.body);
     res.redirect("/todo");
   });

@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/main.css">
-    <title>Todeledo</title>
-</head>
+<%- include("header.ejs") %>
 <body>
     <h1>Todeledo</h1>
+    <h4>Create your todo list:</h4>
     
         <form action="/createitem" method="post">
             <input placeholder="Add a thing to do!" type="text" name="text">
