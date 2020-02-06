@@ -1,0 +1,20 @@
+body {
+  background-color: lightslategray;
+  color: lightpink;
+  text-align: center; }
+  body input {
+    padding: 4px;
+    width: 140px; }
+  body #main {
+    color: black;
+    text-align: center; }
+    body #main #one {
+      margin: 4px; }
+    body #main #two {
+      margin: 4px; }
+    body #main a {
+      background-color: lightpink;
+      color: white;
+      text-decoration: none;
+      padding: 4px;
+      margin-top: 4px; }

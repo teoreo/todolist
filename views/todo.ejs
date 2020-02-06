@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/main.css">
+    <title>Todeledo</title>
+</head>
+<body>
+    <h1>Todeledo</h1>
+    
+        <form action="/createitem" method="post">
+            <input placeholder="Add a thing to do!" type="text" name="text">
+            <input placeholder="When should it be done?" type="text" name="done">
+            <button type="submit">Add to the todo list</button>
+        </form>
+        <div id="main">
+            <% items.forEach( (item)=>{ %>
+            <div class="box" id="one"> <%= item.text %> |
+             <%= item.done %></div>
+            <a id="three" href="/update/<%= item._id%>">Update</a>
+            <a id="four" href="/delete/<%= item._id%>"</a>Delete</a> 
+        <%}) %>
+    </div>
+</body>
+</html>
