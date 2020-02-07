@@ -47,7 +47,9 @@ await addItem.save((error,success)=>{
     //updateOne metod för att kunna redigera 
     await Item.updateOne({_id:req.body._id},
        {$set: {text: req.body.text, done:req.body.done}},
-    {runValidators:true}) // set = gå till databasen, ta klientens värde, updatera 
+    {runValidators:true}, (error)=> error? res.send(error.message): res.redirect("/todo") 
+    
+    ) // set = gå till databasen, ta klientens värde, updatera 
   
     console.log(req.body);
     res.redirect("/todo");

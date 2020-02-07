@@ -1,11 +1,11 @@
 <%- include("header.ejs") %>
     <body>
         <h1>Todeledo</h1>
-    <form method="post">
-    <input type="text" name="text" id="" value="<%=response.text%>">
-    <input type="text" name="done" id="" value="<%=response.done%>">
-    <input type="text" name="_id" id="" value="<%=response._id%>" hidden>
-    <button type="submit">Update</button>
+         <form method="post">
+            <input type="text" name="text" id="" value="<%=response.text%>" required>
+            <input type="text" name="done" id="" value="<%=response.done%>" required>
+            <input type="text" name="_id" id="" value="<%=response._id%>" hidden>
+            <button type="submit">Update</button>
 
         </form>
     </body>

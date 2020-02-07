@@ -1,20 +1,32 @@
 body {
-  background-color: #657c93;
-  color: lightpink;
-  text-align: center; }
-  body input {
-    padding: 4px;
-    width: 140px; }
+  background-image: url(three.jpeg);
+  background-size: cover;
+  color: #550914;
+  text-align: center;
+  margin-top: 10px; }
+  body #todo {
+    padding: 10px;
+    width: 100px; }
+  body #done {
+    padding: 5px;
+    width: 100px; }
+  body h1 {
+    margin-top: 50px; }
+  body form {
+    margin-top: 30px; }
   body #main {
+    margin-top: 130px;
     color: black;
-    text-align: center; }
+    text-align: center;
+    padding-bottom: 20px; }
     body #main #one {
       margin: 4px; }
     body #main #two {
       margin: 4px; }
     body #main a {
-      background-color: lightpink;
+      background-color: #550914;
       color: white;
       text-decoration: none;
       padding: 4px;
-      margin-top: 4px; }
+      margin-top: 4px;
+      margin-bottom: 10px; }

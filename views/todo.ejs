@@ -1,11 +1,11 @@
 <%- include("header.ejs") %>
 <body>
     <h1>Todeledo</h1>
-    <h4>Create your todo list:</h4>
+    <h4>Create your own todo list</h4>
     
         <form action="/createitem" method="post">
-            <input placeholder="Add a thing to do!" type="text" name="text">
-            <input placeholder="When should it be done?" type="text" name="done">
+            <input placeholder="Add a thing to do!" type="text" name="text" id="todo">
+            <input placeholder="When should it be done?" type="date" name="done" id="done">
             <button type="submit">Add to the todo list</button>
         </form>
         <div id="main">
