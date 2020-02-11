@@ -6,18 +6,22 @@
         <form action="/createitem" method="post">
             <input placeholder="Add a thing to do!" type="text" name="text" id="todo">
             <input placeholder="When should it be done?" type="date" name="done" id="done">
-            <button type="submit">Add</button>
+            <button class="far fa-list-alt" type="submit" id="addToList"></button>
         </form>
         <div id="main">
             <% items.forEach( (item)=>{ %>
             <div class="box" id="one"> <%= item.text %> |
-             <%= item.done %> <i class="far fa-check-circle"></i></i></div>
-            <a id="three" href="/update/<%= item._id%>">Update</a>
-            <a id="four" href="/delete/<%= item._id%>"</a>Delete</a> 
+             <%= item.done %> <i class="far fa-check-circle"></i></div>
+            <a  class="fas fa-edit" id="three" href="/update/<%= item._id%>"></a>
+            <a class="far fa-calendar-times" id="four" href="/delete/<%= item._id%>"</a></a> 
         <%}) %>
     </div>
     <!-- pagination  -->
     <a href="/todo/?page=1">1</a>
     <a href="/todo/?page=2">2</a>
+    <div id="sort">
+        <button type="submit">Sort by date</button>
+        <button type="submit">Sort by letter</button>
+    </div>
 </body>
 </html>
