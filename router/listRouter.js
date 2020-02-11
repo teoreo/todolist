@@ -21,8 +21,13 @@ await addItem.save((error,success)=>{
   });
   //renderar till ejs
   router.get("/todo", async (req, res) => {
+    const todos = 3;
+    const page = req.query.page;
       //const sorted = req.query.sort;
-    const items = await Item.find().sort({text:1})
+    const items = await Item
+    .find().sort({text:1})
+    .skip()
+    .limit((page-1) * todos)
   res.render("todo",{items});
   })
 

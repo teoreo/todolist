@@ -1,28 +1,37 @@
 body {
   background-image: url(three.jpeg);
-  background-size: cover;
+  background-size: 110%;
+  background-position-x: -55px;
+  background-position-y: -96px;
   color: #550914;
   text-align: center;
   margin-top: 10px; }
   body #todo {
     padding: 10px;
+    padding-bottom: 12px;
     width: 100px; }
   body #done {
     padding: 5px;
-    width: 100px; }
+    width: 114px;
+    height: 25px; }
   body h1 {
     margin-top: 50px; }
   body form {
-    margin-top: 30px; }
+    margin-top: 20px; }
   body #main {
-    margin-top: 130px;
+    max-height: 250px;
+    overflow: scroll;
+    margin-top: 75px;
     color: black;
     text-align: center;
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    font-size: 14px; }
     body #main #one {
       margin: 4px; }
     body #main #two {
       margin: 4px; }
+    body #main i {
+      color: 0; }
     body #main a {
       background-color: #550914;
       color: white;
