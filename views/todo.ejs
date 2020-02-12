@@ -11,7 +11,8 @@
         <div id="main">
             <% items.forEach( (item)=>{ %>
             <div class="box" id="one"> <%= item.text %> |
-             <%= item.done %> <i class="far fa-check-circle"></i></div>
+             <%= item.done %> <i class="far fa-check-circle"></i>
+            </div>
             <a  class="fas fa-edit" id="three" href="/update/<%= item._id%>"></a>
             <a class="far fa-calendar-times" id="four" href="/delete/<%= item._id%>"</a></a> 
         <%}) %>
@@ -20,8 +21,8 @@
     <a href="/todo/?page=1">1</a>
     <a href="/todo/?page=2">2</a>
     <div id="sort">
-        <button type="submit">Sort by date</button>
-        <button type="submit">Sort by letter</button>
+        <a href="">Sort by date</a>
+        <a>Sort by letter</a>
     </div>
 </body>
 </html>

@@ -21,7 +21,7 @@ await addItem.save((error,success)=>{
   });
   //renderar till ejs
   router.get("/todo", async (req, res) => {
-    const todoItem = 3;
+    const todoItem = 5;
     const page = req.query.page;
       //const sorted = req.query.sort;
     const items = await Item
