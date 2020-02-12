@@ -23,9 +23,12 @@ await addItem.save((error,success)=>{
   router.get("/todo", async (req, res) => {
     const todoItem = 5;
     const page = req.query.page;
-      //const sorted = req.query.sort;
+    const date = req.query.sort;
+    const letter = req.query.text
     const items = await Item
-    .find().sort({text:1})
+    .find()
+    .sort({done:date})
+    .sort({text:letter})
     .skip()
     .limit((page-1) * todoItem)
   res.render("todo",{items});
