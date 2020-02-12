@@ -14,6 +14,7 @@ const addItem = new Item({
 await addItem.save((error,success)=>{
     if (error){
         console.log("It seems to be a problem..")
+      error? res.send(error.message): res.redirect("/todo")
     }
     else
     res.redirect("/todo") // skickar tillbaka om det inte är error
