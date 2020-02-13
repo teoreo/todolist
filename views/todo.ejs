@@ -8,7 +8,7 @@
             <input placeholder="When should it be done?" type="date" name="done" id="done">
             <button class="far fa-list-alt" type="submit" id="addToList"></button>
         </form>
-        <div id="main">
+        <div class="flex-container" id="main">
             <% items.forEach( (item)=>{ %>
             <div class="box" id="one"> <%= item.text %> |
              <%= item.done %> <i class="far fa-check-circle"></i>
@@ -17,10 +17,12 @@
             <a class="far fa-calendar-times" id="four" href="/delete/<%= item._id%>"</a></a> 
         <%}) %>
     </div>
-    <!-- pagination  -->
+    <div id="sort">
+        <!-- pagination  -->
+        <div id ="pagination">
     <a href="/todo/?page=1">1</a>
     <a href="/todo/?page=2">2</a>
-    <div id="sort">
+        </div>
         Sort by date
         <a href="/todo/?sort=1"><i class="far fa-arrow-alt-circle-up"></i></a>
         <a href="/todo/?sort=-1"><i class="far fa-arrow-alt-circle-down"></i></a>
