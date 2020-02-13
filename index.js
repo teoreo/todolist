@@ -22,3 +22,4 @@ mongoose.connect(config.databaseURL, options).then(() => {
     console.log("Connected to server")
     app.listen(port);
 });
+
