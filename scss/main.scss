@@ -58,6 +58,9 @@ body{
                   i.far.fa-check-circle{
                     color:  rgb(85, 9, 20);
                 }
+                .active{
+                    font-weight: 900;
+                }
             #two{
                 margin: 4px;
             }
@@ -72,7 +75,9 @@ body{
                 }
             }
             #sort{ 
-                position: relative;
+                position: absolute;
+                bottom: 58px;
+                left: 45%;
                     #pagination{
                         margin-bottom: 4px;
                     }
