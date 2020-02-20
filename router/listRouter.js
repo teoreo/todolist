@@ -30,8 +30,8 @@ await addItem.save((error,success)=>{
     .find()
     .sort({done:date})
     .sort({text:letter})
-    .skip()
-    .limit((page-1) * todoItem)
+    .skip(page-1)* todoItem
+    .limit()
   res.render("todo",{items});
   })
 
