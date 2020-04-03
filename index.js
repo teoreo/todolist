@@ -13,7 +13,7 @@ app.set("view engine", "ejs");
 //router
 app.use(listRouter);
 //port
-const port = process.env.PORT || 8002;
+const port = process.env.PORT || 8000;
 const options = { useUnifiedTopology: true,
                 useNewUrlParser: true
             }

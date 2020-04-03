@@ -1,8 +1,11 @@
 {
   "name": "inlamning",
   "version": "1.0.0",
-  "description": "",
+  "description": "Todolist",
   "main": "index.js",
+  "engines": {
+    "node":"10.16.3"
+  },
   "scripts": {
     "unittest": "mocha",
     "start": "nodemon index.js & node-sass scss -o public -w",
