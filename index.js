@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const listRouter = require("./router/listRouter")
 const path = require("path")
+const env = require("dotenv").config({ path: "./.env" });
 const app = express(); 
 
 //middleware
