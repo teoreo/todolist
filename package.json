@@ -8,7 +8,8 @@
   },
   "scripts": {
     "unittest": "mocha",
-    "start": "nodemon index.js & node-sass scss -o public -w",
+    "start": "node index.js ",
+    "scss": "node-sass scss -o public -w",
     "cypress": "cypress open",
     "cy:run": "cypress run -- --record --spec 'cypress/integration/todo_ui_spec.js'",
     "test": "npm-run-all --parallel unittest cy:run"
