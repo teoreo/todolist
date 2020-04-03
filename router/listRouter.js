@@ -1,10 +1,24 @@
 const express = require('express');
-const router = express.Router();
 const Item = require("../model/items");
+const router = express.Router();
 
+router.get("/todo", async (req, res) => {
+  const todoItem = 5;
+  const page = req.query.page;
+  const date = req.query.sort;
+  const letter = req.query.text
+  const items = await Item
+  .find()
+  .sort({done:date})
+  .sort({text:letter})
+  .skip((page-1)* todoItem)
+  //.limit()
+  console.log(items)
+res.render("todo",{items});
+})
 
 router.get("/createitem", (req,res)=> {
-    res.render("todo")
+    res.redirect("/todo")
   })
   router.post("/createitem", async (req,res)=>{
 const addItem = new Item({
@@ -20,20 +34,7 @@ await addItem.save((error,success)=>{
     res.redirect("/todo") // skickar tillbaka om det inte är error
 })
   });
-  //renderar till ejs
-  router.get("/todo", async (req, res) => {
-    const todoItem = 5;
-    const page = req.query.page;
-    const date = req.query.sort;
-    const letter = req.query.text
-    const items = await Item
-    .find()
-    .sort({done:date})
-    .sort({text:letter})
-    .skip(page-1)* todoItem
-    //.limit()
-  res.render("todo",{items});
-  })
+  
 
   router.get("/delete/:id", async (req,res)=> {
     console.log(req.params.id);
